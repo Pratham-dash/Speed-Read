@@ -1,0 +1,4 @@
+@media (max-width: 768px) {
+  #word-display { font-size: 1.8rem; }
+  .controls { flex-direction: column; align-items: stretch; }
+}

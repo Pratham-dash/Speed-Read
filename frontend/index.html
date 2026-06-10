@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speed Read</title>
+    <link rel="stylesheet" href="public/styles/variables.css" />
+    <link rel="stylesheet" href="public/styles/main.css" />
+    <link rel="stylesheet" href="public/styles/components.css" />
+    <link rel="stylesheet" href="public/styles/responsive.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Speed Read</h1>
+      <section class="panel">
+        <textarea id="text-input" placeholder="Paste text here..."></textarea>
+        <div id="drop-zone" class="drop-zone" tabindex="0">Drop PDF/TXT file here or click to upload</div>
+        <input id="file-input" type="file" accept=".pdf,.txt" hidden />
+        <div class="controls">
+          <label for="wpm">Speed (WPM)</label>
+          <select id="wpm">
+            <option>250</option><option>300</option><option>350</option><option selected>400</option>
+            <option>500</option><option>600</option><option>700</option><option>800</option><option>900</option><option>1000</option>
+          </select>
+          <button id="process-text">Process Text</button>
+        </div>
+      </section>
+
+      <section class="reader">
+        <div id="word-display" aria-live="polite">Ready</div>
+        <div class="controls">
+          <button id="play-btn">Play</button>
+          <button id="pause-btn">Pause</button>
+          <button id="restart-btn">Restart</button>
+        </div>
+        <input id="progress" type="range" min="0" max="0" value="0" />
+        <p id="progress-label">0 / 0</p>
+      </section>
+
+      <section id="notifications" class="notifications"></section>
+    </main>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
